@@ -9,12 +9,13 @@ class Employee {
     }
 }
 
-// Example usage:
+/* Example usage:
 let emp1 = new Employee("Alice", "HR");
 let emp2 = new Employee("Bob", "Engineering");
 
 console.log(emp1.describe());
 console.log(emp2.describe());
+*/
 
 class Manager extends Employee {
   constructor(name, department, teamSize) {
@@ -28,6 +29,25 @@ class Manager extends Employee {
   }
 }
 
-// Example usage:
+/* Example usage:
 let mgr1 = new Manager("Charlie", "Sales", 5);
 console.log(mgr1.describe());
+*/
+
+
+let emp1 = new Employee("John. Krasinski", "Finance");
+let emp2 = new Employee("Emily Blunt", "IT");
+
+let mgr1 = new Manager("Meghan Markle", "IT", 6);
+let mgr2 = new Manager("Prince Harry", "Marketing", 3);
+
+/* Displaying employee details
+console.log(emp1.describe());
+console.log(emp2.describe());
+*/
+
+/* Displaying manager details
+console.log(mgr1.describe());
+console.log(mgr2.describe());
+*/
+
