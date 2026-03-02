@@ -35,7 +35,7 @@ console.log(mgr1.describe());
 */
 
 
-let emp1 = new Employee("John. Krasinski", "Finance");
+let emp1 = new Employee("John Krasinski", "Finance");
 let emp2 = new Employee("Emily Blunt", "IT");
 
 let mgr1 = new Manager("Meghan Markle", "IT", 6);
@@ -51,3 +51,27 @@ console.log(mgr1.describe());
 console.log(mgr2.describe());
 */
 
+class Company {
+  constructor() {
+    this.employees = [];
+  }
+
+  addEmployee(employee) {
+    this.employees.push(employee);
+  }
+
+  listEmployees() {
+    for (const employee of this.employees) {
+      console.log(employee.describe());
+    }
+  }
+}
+
+// Example usage:
+let myCompany = new Company();
+myCompany.addEmployee(emp1);
+myCompany.addEmployee(emp2);
+myCompany.addEmployee(mgr1);
+myCompany.addEmployee(mgr2);
+
+myCompany.listEmployees();
