@@ -15,3 +15,19 @@ let emp2 = new Employee("Bob", "Engineering");
 
 console.log(emp1.describe());
 console.log(emp2.describe());
+
+class Manager extends Employee {
+  constructor(name, department, teamSize) {
+    super(name, department);
+    this.teamSize = teamSize;
+  }
+
+  // Overriding the parent describe() method
+  describe() {
+    return `Manager: ${this.name} | Department: ${this.department} | Team Size: ${this.teamSize}`;
+  }
+}
+
+// Example usage:
+let mgr1 = new Manager("Charlie", "Sales", 5);
+console.log(mgr1.describe());
